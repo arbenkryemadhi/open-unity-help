@@ -1,0 +1,13 @@
+{
+  "name": "com.arbenkryemadhi.openunityhelp",
+  "version": "1.0.0",
+  "displayName": "Open Unity Help",
+  "description": "Open Unity Help is an open-source project dedicated to helping Unity Gane Developers.",
+  "dependencies": {
+ },
+  "author": {
+    "name": "Arben Kryemadhi",
+    "email": "arbenofc@gmail.com",
+    "url": "https://linktr.ee/arbenkryemadhi"
+  }
+}
