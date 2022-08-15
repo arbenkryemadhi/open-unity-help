@@ -193,7 +193,6 @@ namespace OpenUnityHelp
 		}
 
 		
-		// To be looked at.
 		/// <summary>
 		/// Return sub-list of random items from origin list without repeating.
 		/// </summary>
