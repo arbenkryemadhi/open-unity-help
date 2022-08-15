@@ -1,8 +1,8 @@
 {
   "name": "com.arbenkryemadhi.openunityhelp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Open Unity Help",
-  "description": "Open Unity Help is an open-source project dedicated to helping Unity Gane Developers.",
+  "description": "Open Unity Help is an open-source project dedicated to helping Unity Gane Developers where everyone is welcomed to contribute.",
   "dependencies": {
  },
   "author": {
