@@ -3,7 +3,7 @@ Open Unity Help is an open-source project dedicated to helping Unity Gane Develo
 
 
 # Installation
-### Package Manager
+### Package Manager (Recommended)
 - Open `Window > Package Manager` in Unity.
 - Press the plus button and choose `Add package from git URL...`.
 - Paste in `https://github.com/arbenkryemadhi/open-unity-help.git` and then press the add button.
