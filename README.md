@@ -1,6 +1,8 @@
 # About
-Open Unity Help is an open-source project dedicated to helping Unity Gane Developers.
+Open Unity Help is an open-source project dedicated to helping Unity Gane Developers where everyone is welcomed to contribute.
 
+# Contribution
+Everyone is more than welcomed to contribute, just open a pull-request and it will be merged after being looked at.
 
 # Installation
 ### Package Manager (Recommended)
@@ -11,6 +13,9 @@ Open Unity Help is an open-source project dedicated to helping Unity Gane Develo
 Somewhere in your project's assets folder call `git clone` with `https://github.com/arbenkryemadhi/open-unity-help.git` as the url using bash, batch, or some git gui.
 ### Download
 Download the zip from this page using the green `Code` button and extract it into your project's assets folder.
+
+# Contact
+Don't hesitate to contact me at `arbenofc@gmail.com`.
 
 ***
 __Note__: In your project `Api Compatibility Level` must be set to `.NET 4.x`, this can be found in `Edit > Project Settings... > Player > Other Settings`
