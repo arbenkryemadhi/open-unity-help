@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace OpenUnityHelp.ImprovedBasicFunctions
+namespace OpenUnityHelp
 {
-    public class ImprovedBasicFunctions
+    public class RandomOUH
     {
         ///<summary>
         /// Returns a random float within a minimum and maximum range with a said amount of decimal spaces, 2 by default.
@@ -33,6 +33,27 @@ namespace OpenUnityHelp.ImprovedBasicFunctions
             // Rounds the value again for cases when rounding didn't work properly.
             return (float)System.Math.Round(tempRandomValue, decimalSpaces);
         }
+
+
+        ///<summary>
+        /// Returns a random list of floats within minimum and maximum boundaries, with 2 decimal spaces by default.
+        ///</summary>
+        public static List<float> GetRandomFloats(float minRangeIncluded, float maxRangeIncluded, int numberOfFloats, int decimalSpaces = 2)
+        {
+            List<float> randomFloats = new List<float>();
+
+            for (int i = 0; i < numberOfFloats; i++)
+            {
+                // Generates a random float within the parameters.
+                float randFloat = UnityEngine.Random.Range(minRangeIncluded, maxRangeIncluded);
+
+                // Rounds it up to desired decimal spaces and adds it to the return list.
+                randomFloats.Add((float)System.Math.Round(randFloat, decimalSpaces));
+            }
+
+            return randomFloats;
+        }
+
 
         ///<summary>
         /// Returns a random list of ints within minimum and maximum boundaries.
@@ -79,23 +100,13 @@ namespace OpenUnityHelp.ImprovedBasicFunctions
             return randomInts;
         }
 
+
         ///<summary>
         /// Returns a random list of floats within minimum and maximum boundaries, with 2 decimal spaces by default.
         ///</summary>
-        public static List<float> GetRandomFloats(float minRangeIncluded, float maxRangeIncluded, int numberOfFloats, int decimalSpaces = 2)
+        public static void ShuffleList()
         {
-            List<float> randomFloats = new List<float>();
-
-            for (int i = 0; i < numberOfFloats; i++)
-            {
-                // Generates a random float within the parameters.
-                float randFloat = UnityEngine.Random.Range(minRangeIncluded, maxRangeIncluded);
-
-                // Rounds it up to desired decimal spaces and adds it to the return list.
-                randomFloats.Add((float)System.Math.Round(randFloat, decimalSpaces));
-            }
-
-            return randomFloats;
+            
         }
     }
 }
