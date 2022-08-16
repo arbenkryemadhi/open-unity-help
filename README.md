@@ -9,10 +9,6 @@ Everyone is more than welcomed to contribute, just open a pull-request and it wi
 - Open `Window > Package Manager` in Unity.
 - Press the plus button and choose `Add package from git URL...`.
 - Paste in `https://github.com/arbenkryemadhi/open-unity-help.git` and then press the add button.
-### Clone
-Somewhere in your project's assets folder call `git clone` with `https://github.com/arbenkryemadhi/open-unity-help.git` as the url using bash, batch, or some git gui.
-### Download
-Download the zip from this page using the green `Code` button and extract it into your project's assets folder.
 
 # Contact
 Don't hesitate to contact me at `arbenofc@gmail.com`.
