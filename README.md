@@ -11,7 +11,7 @@ Everyone is more than welcomed to contribute, just open a pull-request and it wi
 - Paste in `https://github.com/arbenkryemadhi/open-unity-help.git` and then press the add button.
 
 # Contact
-Don't hesitate to contact me at `arbenofc@gmail.com`.
+Don't hesitate to contact me at `arbenofc@gmail.com` or in any social media.
 
 ***
 __Note__: In your project `Api Compatibility Level` must be set to `.NET 4.x`, this can be found in `Edit > Project Settings... > Player > Other Settings`
