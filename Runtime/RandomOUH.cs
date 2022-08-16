@@ -196,7 +196,7 @@ namespace OpenUnityHelp
 		/// <summary>
 		/// Return sub-list of random items from origin list without repeating.
 		/// </summary>
-		public static List<T> Take<T>(IList<T> list, int count)
+		public static List<T> ReturnRandomItems<T>(IList<T> list, int count)
 		{
 			List<T> items = new List<T>();
 			List<int> remainedIndexes = Enumerable.Range(0, list.Count).ToList();
