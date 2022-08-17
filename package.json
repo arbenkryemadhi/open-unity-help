@@ -1,13 +1,12 @@
 {
-  "name": "com.arbenkryemadhi.openunityhelp",
-  "version": "1.0.1",
-  "displayName": "Open Unity Help",
-  "description": "Open Unity Help is an open-source project dedicated to helping Unity Gane Developers where everyone is welcomed to contribute.",
-  "dependencies": {
- },
-  "author": {
-    "name": "Arben Kryemadhi",
-    "email": "arbenofc@gmail.com",
-    "url": "https://linktr.ee/arbenkryemadhi"
-  }
+    "name": "com.arbenkryemadhi.openunityhelp",
+    "version": "1.1.0",
+    "displayName": "Open Unity Help",
+    "description": "Open Unity Help is an open-source project dedicated to helping Unity Game Developers where everyone is welcomed to contribute.",
+    "dependencies": {},
+    "author": {
+        "name": "Arben Kryemadhi",
+        "email": "arbenofc@gmail.com",
+        "url": "https://linktr.ee/arbenkryemadhi"
+    }
 }
