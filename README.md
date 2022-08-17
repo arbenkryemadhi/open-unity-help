@@ -1,5 +1,5 @@
 # About
-Open Unity Help is an open-source project dedicated to helping Unity Gane Developers where everyone is welcomed to contribute.
+Open Unity Help is an open-source project dedicated to helping Unity Game Developers where everyone is welcomed to contribute.
 
 # Contribution
 Everyone is more than welcomed to contribute, just open a pull-request and it will be merged after being looked at.
