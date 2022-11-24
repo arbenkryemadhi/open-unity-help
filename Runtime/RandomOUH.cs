@@ -14,22 +14,11 @@ namespace OpenUnityHelp
         /// Returns a random float within a minimum and maximum range with a said amount of decimal spaces, 2 by default.
         /// Also can or cannot have 0 as a result, allowed by default.
         ///</summary>
-        public static float GetRandomFloat(float minRange, float maxRange, int decimalSpaces = 2, bool allowZeroAsResult = true)
+        public static float GetRandomNum(float minRange, float maxRange, int decimalSpaces = 2)
         {
-            float tempRandomValue = 0;
+            float tempRandomValue;
 
-            // If 0 is allowed then generate a random value, otherwise generate it until /= 0.
-            if (allowZeroAsResult)
-            {
-                tempRandomValue = (float)System.Math.Round(UnityEngine.Random.Range(minRange, maxRange), decimalSpaces);
-            }
-            else
-            {
-                while (tempRandomValue == 0)
-                {
-                    tempRandomValue = (float)System.Math.Round(UnityEngine.Random.Range(minRange, maxRange), decimalSpaces);
-                }
-            }
+            tempRandomValue = (float)System.Math.Round(UnityEngine.Random.Range(minRange, maxRange), decimalSpaces);
 
             // Rounds the value again for cases when rounding didn't work properly.
             return (float)System.Math.Round(tempRandomValue, decimalSpaces);
@@ -40,16 +29,16 @@ namespace OpenUnityHelp
 		/// Return a random float between two values which are stored in pairMinMax Vector2.
 		/// Min value is pairMinMax.x and max value is pairMinMax.y, also can have a said amount of decimal spaces, 2 by default.
 		/// </summary>
-		public static float GetRandomFloat(Vector2 pairMinMax, int decimalSpaces = 2)
+		public static float GetRandomNum(Vector2 pairMinMax, int decimalSpaces = 2)
 		{
-			return GetRandomFloat(pairMinMax.x, pairMinMax.y, decimalSpaces);
+			return GetRandomNum(pairMinMax.x, pairMinMax.y, decimalSpaces);
 		}
 
 
 		///<summary>
 		/// Returns a random list of floats within minimum and maximum boundaries, with 2 decimal spaces by default.
 		///</summary>
-		public static List<float> GetRandomFloats(float minRangeIncluded, float maxRangeIncluded, int numberOfFloats, int decimalSpaces = 2)
+		public static List<float> GetRandomNums(float minRangeIncluded, float maxRangeIncluded, int numberOfFloats, int decimalSpaces = 2)
         {
             List<float> randomFloats = new List<float>();
 
@@ -70,7 +59,7 @@ namespace OpenUnityHelp
 		/// Returns a list of random floats between two values which are stored in pairMinMax Vector2.
 		/// Min value is pairMinMax.x and max value is pairMinMax.y, also can have a said amount of decimal spaces, 2 by default.
 		/// </summary>
-		public static List<float> GetRandomFloats(Vector2 pairMinMax, int numberOfFloats, int decimalSpaces = 2)
+		public static List<float> GetRandomNums(Vector2 pairMinMax, int numberOfFloats, int decimalSpaces = 2)
 		{
 			return GetRandomFloats(pairMinMax.x, pairMinMax.y, numberOfFloats, decimalSpaces);
 		}
@@ -80,7 +69,7 @@ namespace OpenUnityHelp
 		/// Returns a random list of ints within minimum and maximum boundaries.
 		/// Gives the possibility for the same number to be included multiple times or not, false by default.
 		///</summary>
-		public static List<int> GetRandomInts(int minRangeIncluded, int maxRangeIncluded, int numberOfInts, bool sameNumberCanBeMultipleTimes = false)
+		public static List<int> GetRandomNums(int minRangeIncluded, int maxRangeIncluded, int numberOfInts, bool sameNumberCanBeMultipleTimes = false)
         {
             List<int> randomInts = new List<int>();
 
@@ -141,18 +130,18 @@ namespace OpenUnityHelp
 
 
 		/// <summary>
-		/// Gets a chance with give probability. If probability is 0.25 it will return true each 4th time on an average.
+		/// Gets a chance with given probability in %. If probability is 25% it will return true each 4th time on an average.
 		/// </summary>
 		public static bool RandomBool(float probability)
 		{
-			return UnityEngine.Random.Range(0f, 1f) < probability;
+			return UnityEngine.Random.Range(0f, 100f) < probability;
 		}
 
 
 		/// <summary>
 		/// Returns random item from array.
 		/// </summary>
-		public static T RandomArrayItem<T>(T[] array)
+		public static T RandomItem<T>(T[] array)
 		{
 			return array[UnityEngine.Random.Range(0, array.Length)];
 		}
@@ -161,7 +150,7 @@ namespace OpenUnityHelp
 		/// <summary>
 		/// Returns random item from list.
 		/// </summary>
-		public static T RandomListItem<T>(List<T> list)
+		public static T RandomItem<T>(List<T> list)
 		{
 			return list[UnityEngine.Random.Range(0, list.Count)];
 		}
@@ -169,7 +158,7 @@ namespace OpenUnityHelp
 		/// <summary>
 		/// Returns random enum item.
 		/// </summary>
-		public static T RandomEnum<T>()
+		public static T RandomItem<T>()
 		{
 			var values = Enum.GetValues(typeof(T));
 			return (T)values.GetValue(UnityEngine.Random.Range(0, values.Length));
@@ -179,7 +168,7 @@ namespace OpenUnityHelp
 		/// <summary>
 		/// Returns random index of passed list.
 		/// </summary>
-		public static int RandomListIndex<T>(List<T> list)
+		public static int RandomIndex<T>(List<T> list)
         {
 			return UnityEngine.Random.Range(0, list.Count);
         }
@@ -188,7 +177,7 @@ namespace OpenUnityHelp
 		/// <summary>
 		/// Returns random index of passed array.
 		/// </summary>
-		public static int RandomArrayIndex<T>(T[] array)
+		public static int RandomIndex<T>(T[] array)
 		{
 			return UnityEngine.Random.Range(0, array.Length);
 		}
@@ -203,7 +192,7 @@ namespace OpenUnityHelp
 			List<int> remainedIndexes = Enumerable.Range(0, list.Count).ToList();
 			for (int i = 0; i < count; i++)
 			{
-				int selectedIndex = RandomListItem(remainedIndexes);
+				int selectedIndex = RandomItem(remainedIndexes);
 				remainedIndexes.Remove(selectedIndex);
 				items.Add(list[selectedIndex]);
 			}
@@ -227,7 +216,7 @@ namespace OpenUnityHelp
 
 
 		/// <summary>
-		/// Returnns a shuffled list of items from the passed list.
+		/// Returns a shuffled list of items from the passed list.
 		/// </summary>
 		public static List<T> GetShuffledList<T>(List<T> list)
         {
