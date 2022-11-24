@@ -61,7 +61,7 @@ namespace OpenUnityHelp
 		/// </summary>
 		public static List<float> GetRandomNums(Vector2 pairMinMax, int numberOfFloats, int decimalSpaces = 2)
 		{
-			return GetRandomFloats(pairMinMax.x, pairMinMax.y, numberOfFloats, decimalSpaces);
+			return GetRandomNums(pairMinMax.x, pairMinMax.y, numberOfFloats, decimalSpaces);
 		}
 
 
